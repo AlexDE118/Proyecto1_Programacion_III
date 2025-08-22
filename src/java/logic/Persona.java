@@ -16,7 +16,7 @@ public class Persona {//aa
         this.id = id;
     }
 
-    //metodos
+    //Setters | Getters
     public String getNombre() {
         return nombre;
     }
@@ -30,4 +30,6 @@ public class Persona {//aa
     public void setId(String id) {
         this.id = id;
     }
+
+    //Metodos de la clase
 }
