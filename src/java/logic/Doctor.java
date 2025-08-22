@@ -5,7 +5,14 @@ public class Doctor extends Persona {
     private String especialidad;
     private String clave;
     //Constructores
-    Doctor(String nombre, String id, String especialidad, String clave) {
+
+    public Doctor() {
+        super("","");
+        this.especialidad = "";
+        this.clave = "111";
+    }
+
+    public Doctor(String nombre, String id, String especialidad, String clave) {
         super(nombre, id);
         this.especialidad = especialidad;
         this.clave = clave;

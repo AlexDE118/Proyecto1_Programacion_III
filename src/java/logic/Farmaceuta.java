@@ -4,7 +4,12 @@ public class Farmaceuta extends Persona {
     //Atributos
     private String clave;
     //Constructores
-    Farmaceuta(String nombre, String id, String clave) {
+
+    public Farmaceuta() {
+        super("","");
+        this.clave = "111";
+    }
+    public Farmaceuta(String nombre, String id, String clave) {
         super(nombre, id);
         this.clave = clave;
     }

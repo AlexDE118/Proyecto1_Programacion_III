@@ -12,7 +12,7 @@ public class Listas {
     List<Paciente> pacientes;
     List<Medicamento> medicamentos;
     //Constructores
-    Listas() {
+    public Listas() {
         this.doctores = new ArrayList<Doctor>();
         this.pacientes = new ArrayList<Paciente>();
         this.medicamentos = new ArrayList<Medicamento>();
