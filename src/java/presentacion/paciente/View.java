@@ -1,4 +1,4 @@
 package presentacion.paciente;
 
-public class View {
+public class View {//aa
 }

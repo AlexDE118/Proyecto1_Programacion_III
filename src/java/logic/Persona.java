@@ -1,6 +1,6 @@
 package logic;
 
-public class Persona {
+public class Persona {//aa
     //Atributos
     protected String nombre;
     protected String id;

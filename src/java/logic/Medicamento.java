@@ -1,6 +1,6 @@
 package logic;
 
-public class Medicamento {
+public class Medicamento {//aa
     //Atributos
     private String ID;
     private String nombre;

@@ -1,6 +1,6 @@
 package logic;
 
-public class Paciente extends Persona {
+public class Paciente extends Persona {//aa
 
     //Attritubtos
 
