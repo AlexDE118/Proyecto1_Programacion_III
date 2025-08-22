@@ -1,8 +1,8 @@
-package data;
+package hospital.data;
 
-import logic.Doctor;
-import logic.Medicamento;
-import logic.Paciente;
+import hospital.logic.Doctor;
+import hospital.logic.Medicamento;
+import hospital.logic.Paciente;
 
 import java.util.ArrayList;
 import java.util.List;

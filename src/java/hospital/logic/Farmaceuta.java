@@ -1,4 +1,4 @@
-package logic;
+package hospital.logic;
 
 public class Farmaceuta extends Persona {
     //Atributos
