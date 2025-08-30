@@ -10,7 +10,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
-        } catch (Exception ex) { };
+        } catch (Exception ex) { }
         View view = new View();
         Model model = new Model();
         Controller controllerDoctor = new Controller(view, model);
