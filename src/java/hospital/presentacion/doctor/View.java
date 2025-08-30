@@ -87,9 +87,10 @@ public class View implements PropertyChangeListener {
     public void propertyChange(PropertyChangeEvent evt) {
         switch (evt.getPropertyName()) {
             case Model.CURRENT:
+                ID_textfield.setText(model.getCurrent().getId());
                 nombre_textfield.setText(model.getCurrent().getNombre());
                 especialidad_textField.setText(model.getCurrent().getEspecialidad());
-                buscar_textfield.setText(model.getCurrent().getClave());
+                //buscar_textfield.setText(model.getCurrent().getClave());
                 break;
             case Model.LISTADOCTORES:
                 int[] cols = {TableModel.ID,TableModel.NAME, TableModel.ESPECIALIAD};

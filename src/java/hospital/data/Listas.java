@@ -14,9 +14,9 @@ public class Listas {
     //Constructores
     public Listas() {
         this.doctores = new ArrayList<Doctor>();
-        doctores.add(new Doctor("DOC-111","AAA","ESPECIALIAD - A","123"));
-        doctores.add(new Doctor("DOC-222","BBB","ESPECIALIAD - B","123"));
-        doctores.add(new Doctor("DOC-333","CCC","ESPECIALIAD - C","123"));
+        doctores.add(new Doctor("AAA","DOC-111","ESPECIALIAD - A","123"));
+        doctores.add(new Doctor("BBB","DOC-222","ESPECIALIAD - B","123"));
+        doctores.add(new Doctor("CCC","DOC-333","ESPECIALIAD - C","123"));
         this.pacientes = new ArrayList<Paciente>();
         pacientes.add(new Paciente("PAC-111","AAA","111-222"));
         pacientes.add(new Paciente("PAC-222","BBB","222-333"));
