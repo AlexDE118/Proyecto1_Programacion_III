@@ -1,6 +1,8 @@
 package hospital.logic;
 import hospital.data.Listas;
 
+import java.util.List;
+
 //singleton
 
 public class Service {
@@ -11,6 +13,8 @@ public class Service {
         if(instance == null) instance = new Service();
         return instance;
     }
+
+    private Service(){ listas = new Listas(); }
 
     //================== DOCTORES ==================//
 
@@ -34,6 +38,10 @@ public class Service {
             throw new Exception("Doctor existente");
         }
 
+    }
+
+    public List<Doctor> loadListaDoctores(){
+        return listas.getDoctores();
     }
 
     //================== Pacientes ==================//

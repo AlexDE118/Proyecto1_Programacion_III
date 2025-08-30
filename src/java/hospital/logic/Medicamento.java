@@ -4,7 +4,7 @@ public class Medicamento {
     //Atributos
     private String ID;
     private String nombre;
-    private float presentacion;
+    private double presentacion;
 
     //Constructores
 
@@ -14,7 +14,7 @@ public class Medicamento {
         this.presentacion = 0;
     }
 
-    public Medicamento(String ID, String nombre, float presentacion) {
+    public Medicamento(String ID, String nombre, double presentacion) {
         this.ID = ID;
         this.nombre = nombre;
         this.presentacion = presentacion;
@@ -30,7 +30,7 @@ public class Medicamento {
         return nombre;
     }
 
-    public float getPresentacion() {
+    public double getPresentacion() {
         return presentacion;
     }
 
@@ -42,7 +42,7 @@ public class Medicamento {
         this.nombre = nombre;
     }
 
-    public void setPresentacion(float presentacion) {
+    public void setPresentacion(double presentacion) {
         this.presentacion = presentacion;
     }
     //Metodos de la clase

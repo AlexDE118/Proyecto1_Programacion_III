@@ -7,16 +7,16 @@ import java.beans.PropertyChangeListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Model extends AbstractModel{//aa
+public class Model extends AbstractModel{
     Doctor current;
-    List<Doctor> listaDoctores;
+    List<Doctor> doctores;
 
     public static final String CURRENT = "Current";
-    public static final String LISTADOCTORES = "listaDoctores";
+    public static final String LISTADOCTORES = "doctores";
 
     public Model() {
         current = new Doctor();
-        listaDoctores = new ArrayList<>();
+        doctores = new ArrayList<>();
     }
 
     @Override
@@ -36,16 +36,16 @@ public class Model extends AbstractModel{//aa
     }
 
     public List<Doctor> getListaDoctores() {
-        return listaDoctores;
+        return doctores;
     }
 
     public void setListaDoctores(List<Doctor> listaDoctores) {
-        this.listaDoctores = listaDoctores;
+        this.doctores = listaDoctores;
         firePropertyChange(LISTADOCTORES);
     }
 
     public void addDoctor(Doctor doctor) {
-        listaDoctores.add(doctor);
+        doctores.add(doctor);
         firePropertyChange(LISTADOCTORES);
         }
 }

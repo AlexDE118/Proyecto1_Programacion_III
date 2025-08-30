@@ -1,6 +1,7 @@
 package hospital.presentacion.doctor;
 
 import hospital.logic.Doctor;
+import hospital.presentacion.doctor.TableModel;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -37,14 +38,15 @@ public class View implements PropertyChangeListener {
                 Doctor doctor = new Doctor();
                 doctor.setId(ID_textfield.getText());
                 doctor.setNombre(nombre_textfield.getText());
-                doctor.setEspecialidad("TEMP");//TEMP
+                doctor.setEspecialidad(especialidad_textField.getText());//TEMP
                 doctor.setClave("123");//TEMP
-//                try {
-//                    controller.createDoctor(doctor);
-//                    JOptionPane.showMessageDialog(null, "Doctor guardado con éxito");
-//                } catch (Exception ex) {
-//                    JOptionPane.showMessageDialog(null, "Error: " + ex.getMessage());
-//                }
+                try{
+                    controller.createDoctor(doctor);
+                    JOptionPane.showMessageDialog(null, "Doctor guardado exitosamente");
+                //    controller.loadDoctors();
+                } catch(Exception ex){
+                    JOptionPane.showMessageDialog(Medicos_JPanel, "Error al crear el Doctor " + ex.getMessage());
+                }
             }
 
         });
@@ -53,6 +55,16 @@ public class View implements PropertyChangeListener {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Doctor doctor = new Doctor();
+            }
+        });
+
+        listaDoctores_JTable.getSelectionModel().addListSelectionListener(e -> {
+            if (!e.getValueIsAdjusting()) {
+                int row = listaDoctores_JTable.getSelectedRow();
+                if (row != -1) {
+                    Doctor selected = model.getListaDoctores().get(row);
+                    model.setCurrent(selected);
+                }
             }
         });
     }
@@ -71,11 +83,20 @@ public class View implements PropertyChangeListener {
     }
 
 
-    //@Override
+    @Override
     public void propertyChange(PropertyChangeEvent evt) {
-//        switch (evt.getPropertyName()) {
-//            case Model.CURRENT
-//
-//        }
+        switch (evt.getPropertyName()) {
+            case Model.CURRENT:
+                nombre_textfield.setText(model.getCurrent().getNombre());
+                especialidad_textField.setText(model.getCurrent().getEspecialidad());
+                buscar_textfield.setText(model.getCurrent().getClave());
+                break;
+            case Model.LISTADOCTORES:
+                int[] cols = {TableModel.ID,TableModel.NAME, TableModel.ESPECIALIAD};
+                TableModel tableModel = new TableModel(cols, model.getListaDoctores());
+                listaDoctores_JTable.setModel(tableModel);
+                listaDoctores_JTable.updateUI();
+                break;
+        }
     }
 }

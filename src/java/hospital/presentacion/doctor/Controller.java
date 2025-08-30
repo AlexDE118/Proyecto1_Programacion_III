@@ -24,4 +24,8 @@ public class Controller {
         Service.instance().createDoctor(doctor);
     }
 
+    public void loadDoctors() {
+        model.setListaDoctores(Service.instance().loadListaDoctores());
+    }
+
 }

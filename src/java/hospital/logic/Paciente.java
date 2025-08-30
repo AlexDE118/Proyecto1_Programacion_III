@@ -14,7 +14,7 @@ public class Paciente extends Persona {//aa
     //    this.fechaNacimiento = new Fecha();
         this.numeroTelefono = "0000-0000";
     }
-    public Paciente(String nombre, String id, Fecha fechaNacimiento, String numeroTelefono) {
+    public Paciente(String nombre, String id, String numeroTelefono) {
         super(nombre, id);
     //    this.fechaNacimiento = fechaNacimiento;
         this.numeroTelefono = numeroTelefono;

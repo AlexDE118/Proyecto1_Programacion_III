@@ -14,8 +14,17 @@ public class Listas {
     //Constructores
     public Listas() {
         this.doctores = new ArrayList<Doctor>();
+        doctores.add(new Doctor("DOC-111","AAA","ESPECIALIAD - A","123"));
+        doctores.add(new Doctor("DOC-222","BBB","ESPECIALIAD - B","123"));
+        doctores.add(new Doctor("DOC-333","CCC","ESPECIALIAD - C","123"));
         this.pacientes = new ArrayList<Paciente>();
+        pacientes.add(new Paciente("PAC-111","AAA","111-222"));
+        pacientes.add(new Paciente("PAC-222","BBB","222-333"));
+        pacientes.add(new Paciente("PAC-333","CCC","333-444"));
         this.medicamentos = new ArrayList<Medicamento>();
+        medicamentos.add(new Medicamento("111","AAA",1.1));
+        medicamentos.add(new Medicamento("222","BBB",1.2));
+        medicamentos.add(new Medicamento("333","CCC",1.3));
     }
 
     //Setters | Getters
@@ -40,8 +49,4 @@ public class Listas {
     public void setMedicamentos(List<Medicamento> medicamentos) {
         this.medicamentos = medicamentos;
     }
-
-    // Metodos de la clase
-
-
 }
