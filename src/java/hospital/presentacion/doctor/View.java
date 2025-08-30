@@ -43,7 +43,7 @@ public class View implements PropertyChangeListener {
                 try{
                     controller.createDoctor(doctor);
                     JOptionPane.showMessageDialog(null, "Doctor guardado exitosamente");
-                //    controller.loadDoctors();
+                    controller.loadDoctors();
                 } catch(Exception ex){
                     JOptionPane.showMessageDialog(Medicos_JPanel, "Error al crear el Doctor " + ex.getMessage());
                 }
