@@ -1,4 +1,7 @@
 package hospital.presentacion.paciente;
 
-public class Model {//aa
+import hospital.presentacion.AbstractModel;
+
+public class Model extends AbstractModel {
+
 }
