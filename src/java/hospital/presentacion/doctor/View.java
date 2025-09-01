@@ -58,6 +58,15 @@ public class View implements PropertyChangeListener {
             }
         });
 
+        limpiarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ID_textfield.setText("");
+                nombre_textfield.setText("");
+                especialidad_textField.setText("");
+            }
+        });
+
         listaDoctores_JTable.getSelectionModel().addListSelectionListener(e -> {
             if (!e.getValueIsAdjusting()) {
                 int row = listaDoctores_JTable.getSelectedRow();
