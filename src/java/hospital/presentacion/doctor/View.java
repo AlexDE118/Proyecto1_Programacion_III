@@ -38,8 +38,8 @@ public class View implements PropertyChangeListener {
                 Doctor doctor = new Doctor();
                 doctor.setId(ID_textfield.getText());
                 doctor.setNombre(nombre_textfield.getText());
-                doctor.setEspecialidad(especialidad_textField.getText());//TEMP
-                doctor.setClave("123");//TEMP
+                doctor.setEspecialidad(especialidad_textField.getText());
+                doctor.setClave(ID_textfield.getText());
                 try{
                     controller.createDoctor(doctor);
                     JOptionPane.showMessageDialog(null, "Doctor guardado exitosamente");
