@@ -45,6 +45,16 @@ public class Service {
         return listas.getDoctores();
     }
 
+    public void deleteDoctor(Doctor doctor) throws Exception {
+        Doctor result = listas.getDoctores().stream().filter(x -> x.getId().equals(doctor.getId())).findFirst().orElse(null);
+        if(result != null){
+            listas.getDoctores().remove(result);
+        }
+        else {
+            throw new Exception("Doctor no existente");
+        }
+    }
+
     //================== Pacientes ==================//
 
     public void createPaciente(Paciente paciente) throws Exception{

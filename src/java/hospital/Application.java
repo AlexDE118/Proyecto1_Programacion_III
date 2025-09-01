@@ -20,6 +20,7 @@ public class Application {
         hospital.presentacion.farmaceuta.View farmaceutaView = new hospital.presentacion.farmaceuta.View();
         hospital.presentacion.farmaceuta.Model farmaceutaModel = new hospital.presentacion.farmaceuta.Model();
         hospital.presentacion.farmaceuta.Controller controllerFarmaceuta = new hospital.presentacion.farmaceuta.Controller(farmaceutaView, farmaceutaModel);
+        controllerFarmaceuta.loadFarmaceutas();
 
         JFrame window = new JFrame();
         JTabbedPane tabbedPane = new JTabbedPane();

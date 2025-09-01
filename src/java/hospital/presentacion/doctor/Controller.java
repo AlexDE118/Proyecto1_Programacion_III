@@ -28,4 +28,8 @@ public class Controller {
         model.setListaDoctores(Service.instance().loadListaDoctores());
     }
 
+    public void deleteDoctor(Doctor doctor) throws Exception{
+        Service.instance().deleteDoctor(doctor);
+    }
+
 }
