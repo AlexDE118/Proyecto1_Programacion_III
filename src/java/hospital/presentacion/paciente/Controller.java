@@ -1,4 +1,4 @@
 package hospital.presentacion.paciente;
 
-public class Controller {//aa
+public class Controller {
 }

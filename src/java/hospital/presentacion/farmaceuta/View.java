@@ -1,6 +1,9 @@
 package hospital.presentacion.farmaceuta;
 
+import hospital.logic.Farmaceuta;
+
 import javax.swing.*;
+import java.beans.PropertyChangeEvent;
 
 public class View {
     private JLabel farmaceutaLabel;
@@ -16,4 +19,32 @@ public class View {
     private JButton buscarButton;
     private JButton reporteButton;
     private JTable farmaceuta_Table;
+
+    public View(){
+
+    }
+
+    //================== MVC ==================//
+
+    Controller controller;
+    Model model;
+
+    public void setController(Controller controller){
+        this.controller = controller;
+    }
+
+    public void setModel(Model model) {
+        this.model = model;
+    }
+
+    public void propertyChange(PropertyChangeEvent evt) {
+        switch (evt.getPropertyName()) {
+            case Model.CURRENT:
+                //---//
+                break;
+            case Model.LISTAFARMACEUTAS:
+                //---//
+                break;
+        }
+    }
 }

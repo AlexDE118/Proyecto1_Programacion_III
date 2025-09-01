@@ -17,7 +17,29 @@ public class Model extends AbstractModel {
     public Model(){
         currentFarmaceuta = new Farmaceuta();
         farmaceutas = new ArrayList<>();
+        firePropertyChange(CURRENT);
+        firePropertyChange(LISTAFARMACEUTAS);
     }
 
+    public Farmaceuta getCurrentFarmaceuta() {
+        return currentFarmaceuta;
+    }
+    public void setCurrentFarmaceuta(Farmaceuta currentFarmaceuta) {
+        this.currentFarmaceuta = currentFarmaceuta;
+        firePropertyChange(CURRENT);
+    }
 
+    public List<Farmaceuta> getFarmaceutas() {
+        return farmaceutas;
+    }
+    public void setFarmaceutas(List<Farmaceuta> farmaceutas) {
+        this.farmaceutas = farmaceutas;
+        firePropertyChange(LISTAFARMACEUTAS);
+    }
+    @Override
+    public void addPropertyChangeListener(PropertyChangeListener listener){
+        super.addPropertyChangeListener(listener);
+        firePropertyChange(CURRENT);
+        firePropertyChange(LISTAFARMACEUTAS);
+    }
 }

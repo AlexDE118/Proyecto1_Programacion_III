@@ -10,10 +10,22 @@ public class Controller {
     public Controller(View view, Model model) {
         this.view = view;
         this.model = model;
-        //view.setController(this);
-        //view.setModel(model);
+        view.setController(this);
+        view.setModel(model);
     }
 
+    public void readFarmaceutas(String ID) throws Exception {
+        Farmaceuta farmaceuta = new Farmaceuta();
+        farmaceuta.setId(ID);
+        model.setCurrentFarmaceuta(Service.instance().readFarmaceuta(farmaceuta));
+    }
 
+    public void createFarmaceuta(Farmaceuta farmaceuta) throws Exception {
+        Farmaceuta e = new Farmaceuta();
+        Service.instance().createFarmaceuta(e);
+    }
 
+    public void loadFarmaceutas() {
+        model.setFarmaceutas(Service.instance().loadListaFarmaceutas());
+    }
 }
