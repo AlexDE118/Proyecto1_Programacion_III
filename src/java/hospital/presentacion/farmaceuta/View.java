@@ -20,6 +20,10 @@ public class View {
     private JButton reporteButton;
     private JTable farmaceuta_Table;
 
+    public JTable getFarmaceuta_Table() {
+        return farmaceuta_Table;
+    }
+
     public View(){
 
     }

@@ -17,6 +17,9 @@ public class Application {
         hospital.presentacion.doctor.Controller controllerDoctor = new Controller(doctorView, doctorModel);
         controllerDoctor.loadDoctors();
 
+        hospital.presentacion.farmaceuta.View farmaceutaView = new hospital.presentacion.farmaceuta.View();
+        hospital.presentacion.farmaceuta.Model farmaceutaModel = new hospital.presentacion.farmaceuta.Model();
+        hospital.presentacion.farmaceuta.Controller controllerFarmaceuta = new hospital.presentacion.farmaceuta.Controller(farmaceutaView, farmaceutaModel);
 
         JFrame window = new JFrame();
         JTabbedPane tabbedPane = new JTabbedPane();
@@ -28,7 +31,7 @@ public class Application {
         //window.setContentPane(doctorView.getMedicos_JPanelPanel());
         window.setContentPane(tabbedPane);
         tabbedPane.addTab("Doctores", doctorView.getMedicos_JPanelPanel());
-
+        tabbedPane.addTab("Farmaceutas",farmaceutaView.getFarmaceuta_Table());
 
         window.setVisible(true);
     }
