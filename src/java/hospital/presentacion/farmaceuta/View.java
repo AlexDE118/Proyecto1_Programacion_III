@@ -3,6 +3,7 @@ package hospital.presentacion.farmaceuta;
 import hospital.logic.Farmaceuta;
 import hospital.presentacion.farmaceuta.TableModel;
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.beans.PropertyChangeEvent;
@@ -22,11 +23,16 @@ public class View  implements PropertyChangeListener {
     private JButton buscarButton;
     private JButton reporteButton;
     private JTable farmaceuta_Table;
+    private JPanel farmaceuta_JPanel;
+
 
     public JTable getFarmaceuta_Table() {
         return farmaceuta_Table;
     }
 
+    public JPanel getFarmaceuta_Panel() {
+        return farmaceuta_JPanel;
+    }
     public View(){
         guardarButton.addActionListener(new ActionListener() {
             @Override
@@ -72,7 +78,8 @@ public class View  implements PropertyChangeListener {
     public void propertyChange(PropertyChangeEvent evt) {
         switch (evt.getPropertyName()) {
             case Model.CURRENT:
-                //---//
+                nombre_textField.setText(model.currentFarmaceuta.getNombre());
+                ID_textField.setText(model.currentFarmaceuta.getId());
                 break;
             case Model.LISTAFARMACEUTAS:
                 int[] cols = {TableModel.ID,TableModel.NAME};

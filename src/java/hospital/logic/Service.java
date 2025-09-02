@@ -36,7 +36,7 @@ public class Service {
         if(result != null){
             return result;
         }else {
-            throw new Exception("Doctor existente");
+            throw new Exception("Doctor no existente");
         }
 
     }
@@ -73,7 +73,7 @@ public class Service {
         if(result != null){
             return result;
         }else  {
-            throw new Exception("Paciente existente");
+            throw new Exception("Paciente no existente");
         }
     }
 

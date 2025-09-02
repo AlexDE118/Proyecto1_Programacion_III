@@ -18,7 +18,9 @@
         <children>
           <component id="7f805" class="javax.swing.JLabel" binding="ID_label">
             <constraints>
-              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="12" height="39"/>
+              </grid>
             </constraints>
             <properties>
               <text value="ID"/>
@@ -27,7 +29,7 @@
           <component id="856e6" class="javax.swing.JTextField" binding="ID_textfield">
             <constraints>
               <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="-1"/>
+                <preferred-size width="150" height="39"/>
               </grid>
             </constraints>
             <properties/>
@@ -58,7 +60,9 @@
           </component>
           <component id="6a836" class="javax.swing.JLabel" binding="nombre_label">
             <constraints>
-              <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="50" height="39"/>
+              </grid>
             </constraints>
             <properties>
               <text value="Nombre"/>
@@ -67,7 +71,7 @@
           <component id="e8a00" class="javax.swing.JTextField" binding="nombre_textfield">
             <constraints>
               <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="-1"/>
+                <preferred-size width="150" height="39"/>
               </grid>
             </constraints>
             <properties>
@@ -76,7 +80,9 @@
           </component>
           <component id="7610c" class="javax.swing.JButton" binding="guardarButton" default-binding="true">
             <constraints>
-              <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="84" height="39"/>
+              </grid>
             </constraints>
             <properties>
               <text value="Guardar"/>
@@ -84,7 +90,9 @@
           </component>
           <component id="39496" class="javax.swing.JButton" binding="limpiarButton">
             <constraints>
-              <grid row="1" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="1" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="78" height="39"/>
+              </grid>
             </constraints>
             <properties>
               <text value="Limpiar"/>
@@ -140,7 +148,7 @@
               <text value="Reporte"/>
             </properties>
           </component>
-          <scrollpane id="7b668">
+          <scrollpane id="7b668" binding="JScrollPane">
             <constraints>
               <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
             </constraints>

@@ -2,7 +2,6 @@ package hospital.presentacion.farmaceuta;
 
 import hospital.logic.Farmaceuta;
 import hospital.presentacion.AbstractTableModel;
-import java.util.ArrayList;
 import java.util.List;
 
 public class TableModel extends AbstractTableModel<Farmaceuta>  implements javax.swing.table.TableModel{
@@ -15,7 +14,7 @@ public class TableModel extends AbstractTableModel<Farmaceuta>  implements javax
 
     @Override
     protected void initColNames() {
-        columnName = new String[2];
+        columnName = new String[3];
         columnName[ID] = "ID";
         columnName[NAME] = "Nombre";
     }

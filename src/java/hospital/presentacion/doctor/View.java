@@ -1,7 +1,6 @@
 package hospital.presentacion.doctor;
 
 import hospital.logic.Doctor;
-import hospital.presentacion.doctor.TableModel;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -26,12 +25,15 @@ public class View implements PropertyChangeListener {
     private JButton buscarButton;
     private JButton reporteButton;
     private JTable listaDoctores_JTable;
+    private JScrollPane JScrollPane;
 
-    public JPanel getMedicos_JPanelPanel() {
+    public JPanel getMedicos_JPanel() {
         return Medicos_JPanel;
     }
 
     public View() {
+
+
         guardarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -58,6 +60,13 @@ public class View implements PropertyChangeListener {
             }
         });
 
+        borrarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Doctor doctor = new Doctor();
+            }
+        });
+
         limpiarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -76,6 +85,8 @@ public class View implements PropertyChangeListener {
                 }
             }
         });
+
+    //END OF VIEW//
     }
 
     //================== MVC ==================//
@@ -99,7 +110,6 @@ public class View implements PropertyChangeListener {
                 ID_textfield.setText(model.getCurrent().getId());
                 nombre_textfield.setText(model.getCurrent().getNombre());
                 especialidad_textField.setText(model.getCurrent().getEspecialidad());
-                //buscar_textfield.setText(model.getCurrent().getClave());
                 break;
             case Model.LISTADOCTORES:
                 int[] cols = {TableModel.ID,TableModel.NAME, TableModel.ESPECIALIAD};
