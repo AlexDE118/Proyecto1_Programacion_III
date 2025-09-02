@@ -12,6 +12,7 @@ public class Controller {
         this.model = model;
         view.setController(this);
         view.setModel(model);
+        model.setFarmaceutas(Service.instance().loadListaFarmaceutas());
     }
 
     public void readFarmaceutas(String ID) throws Exception {
