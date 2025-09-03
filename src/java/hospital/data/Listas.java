@@ -1,9 +1,6 @@
 package hospital.data;
 
-import hospital.logic.Doctor;
-import hospital.logic.Farmaceuta;
-import hospital.logic.Medicamento;
-import hospital.logic.Paciente;
+import hospital.logic.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +10,8 @@ public class Listas {
     List<Paciente> pacientes;
     List<Medicamento> medicamentos;
     List<Farmaceuta> farmaceutas;
+    List<Receta> recetas;
+    List<Prescripcion> prescripciones;
     //Constructores
     public Listas() {
         this.doctores = new ArrayList<Doctor>();
@@ -37,6 +36,7 @@ public class Listas {
     }
 
     //Setters | Getters
+
     public List<Doctor> getDoctores() {
         return doctores;
     }
@@ -52,9 +52,11 @@ public class Listas {
     public void setPacientes(List<Paciente> pacientes) {
         this.pacientes = pacientes;
     }
+
     public List<Medicamento> getMedicamentos() {
         return medicamentos;
     }
+
     public void setMedicamentos(List<Medicamento> medicamentos) {
         this.medicamentos = medicamentos;
     }
@@ -65,5 +67,21 @@ public class Listas {
 
     public void setFarmaceutas(List<Farmaceuta> farmaceutas) {
         this.farmaceutas = farmaceutas;
+    }
+
+    public List<Receta> getRecetas() {
+        return recetas;
+    }
+
+    public void setRecetas(List<Receta> recetas) {
+        this.recetas = recetas;
+    }
+
+    public List<Prescripcion> getPrescripciones() {
+        return prescripciones;
+    }
+
+    public void setPrescripciones(List<Prescripcion> prescripciones) {
+        this.prescripciones = prescripciones;
     }
 }

@@ -4,8 +4,8 @@ import hospital.logic.Farmaceuta;
 import hospital.logic.Service;
 
 public class Controller {
-    private View view;
-    private Model model;
+    private hospital.presentacion.farmaceuta.View view;
+    private hospital.presentacion.farmaceuta.Model model;
 
     public Controller(View view, Model model) {
         this.view = view;

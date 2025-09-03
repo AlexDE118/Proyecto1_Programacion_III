@@ -134,6 +134,17 @@ public class Service {
     public List<Medicamento> loadListaMedicamentos(){
         return listas.getMedicamentos();
     }
+    //========================== Receta ==========================//
+
+    public List<Receta>  loadListaRecetas(){
+        return listas.getRecetas();
+    }
+
+    //========================== Prescripcion ==========================//
+
+    public List<Prescripcion> loadListaPrescripciones(){
+        return listas.getPrescripciones();
+    }
 
     //======================= END ======================//
 }
